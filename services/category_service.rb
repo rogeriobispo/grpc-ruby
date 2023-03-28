@@ -15,4 +15,12 @@ class CategoryService < Pb::CategoryService::Service
 
     ::Pb::CategoryList.new(categories: categories)
   end
+
+  def get_category(req, _others)
+    id = req.id
+    
+    category = $category_db.find(id)
+
+    ::Pb::Category.new(category) if category
+  end
 end

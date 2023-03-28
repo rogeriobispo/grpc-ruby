@@ -15,4 +15,8 @@ class CategoryDB
   def all()
     db.values
   end
+
+  def find(id)
+    db[id.to_i]
+  end
 end
