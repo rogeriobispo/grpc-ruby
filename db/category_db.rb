@@ -13,6 +13,6 @@ class CategoryDB
   end
 
   def all()
-    db
+    db.values
   end
 end
