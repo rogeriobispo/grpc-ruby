@@ -15,6 +15,7 @@ module Pb
       self.service_name = 'pb.CategoryService'
 
       rpc :CreateCategory, ::Pb::CreateCategoryRequest, ::Pb::CategoryResponse
+      rpc :CreateCategoryStream, stream(::Pb::CreateCategoryRequest), ::Pb::CategoryList
       rpc :ListCategory, ::Pb::Blank, ::Pb::CategoryList
       rpc :GetCategory, ::Pb::CategoryGetRequest, ::Pb::Category
     end
