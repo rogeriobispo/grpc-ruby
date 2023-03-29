@@ -16,6 +16,7 @@ module Pb
 
       rpc :CreateCategory, ::Pb::CreateCategoryRequest, ::Pb::CategoryResponse
       rpc :CreateCategoryStream, stream(::Pb::CreateCategoryRequest), ::Pb::CategoryList
+      rpc :CreateCategoryBidirectionalStream, stream(::Pb::CreateCategoryRequest), stream(::Pb::Category)
       rpc :ListCategory, ::Pb::Blank, ::Pb::CategoryList
       rpc :GetCategory, ::Pb::CategoryGetRequest, ::Pb::Category
     end
